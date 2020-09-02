@@ -29,6 +29,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+
 <!--        项目测试起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -43,6 +49,7 @@
         </dependency>
     </dependencies>
 
+<!--    jar 部署-->
     <build>
         <plugins>
             <plugin>
