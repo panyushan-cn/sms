@@ -2,7 +2,7 @@
 only for J2EE Course Design
 ## 项目由SpringBoot + vue.js 搭建 (primary)
 
-##如何运行
+## 如何运行
 
 先启动后端，运行主程序**LibrarymanagementsystemWebApplication**。端口为8998。
 再启动前端，执行命令<code>npm run serve</code>
