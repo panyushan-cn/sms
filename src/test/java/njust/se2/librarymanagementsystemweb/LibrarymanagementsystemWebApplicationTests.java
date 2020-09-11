@@ -11,16 +11,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-//@SpringBootTest
-//class LibrarymanagementsystemWebApplicationTests {
-//
-//    @Test
-//    void contextLoads() {
-//
-//    }
-//
-//}
-
 @RunWith(SpringRunner.class)
 
 @SpringBootTest
