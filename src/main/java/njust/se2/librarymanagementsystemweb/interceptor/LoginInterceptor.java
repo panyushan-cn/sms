@@ -8,8 +8,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * 拦截器
+ */
 public class LoginInterceptor implements HandlerInterceptor {
 
+    /**
+     * 代码会在访问需要拦截的页面时执行。 是否需要拦截。
+     * @param httpServletRequest 原生语法
+     * @param httpServletResponse 原生语法
+     * @param o Object类实现
+     * @return boolean值
+     * @throws Exception 抛出异常
+     */
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         HttpSession session = httpServletRequest.getSession();
