@@ -4,12 +4,10 @@ import njust.se2.librarymanagementsystemweb.pojo.User;
 import njust.se2.librarymanagementsystemweb.result.Result;
 import njust.se2.librarymanagementsystemweb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
 
 import javax.servlet.http.HttpSession;
-import java.util.Objects;
 
 @RestController
 public class LoginController {
@@ -17,6 +15,12 @@ public class LoginController {
     @Autowired
     UserService userService;
 
+    /**
+     * 登录方法
+     * @param requestUser 请求用户对象
+     * @param session 网页session
+     * @return 状态码 是否运行登录
+     */
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody

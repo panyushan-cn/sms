@@ -17,11 +17,12 @@ public class MyWebConfigurer implements WebMvcConfigurer {
         return new LoginInterceptor();
     }
 
+    /**
+     * 拦截除index.html的所有路径
+     * @param registry 映射截取程序列表
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        /*
-          拦截除index.html的所有路径
-         */
         registry.addInterceptor(getLoginIntercepter()).addPathPatterns("/**").excludePathPatterns("/index.html");
     }
 }
