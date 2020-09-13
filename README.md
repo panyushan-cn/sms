@@ -1,5 +1,9 @@
 # LibraryManagementSystem
 only for J2EE Course Design
+
+# 前端地址
+https://github.com/njustmengfanyu/lms-vue
+
 ## 项目由SpringBoot + vue.js 搭建 (primary)
 
 ## 如何运行
