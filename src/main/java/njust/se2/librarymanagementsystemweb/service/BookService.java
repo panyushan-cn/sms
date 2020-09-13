@@ -50,4 +50,13 @@ public class BookService {
         Category category = categoryService.get(cid);
         return bookDAO.findAllByCategory(category);
     }
+
+    /**
+     * 根据关键字查询书籍信息
+     * @param keywords  关键字
+     * @return 符合关键字条件的书籍列表
+     */
+    public List<Book> Search(String keywords) {
+        return bookDAO.findAllByTitleLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
+    }
 }

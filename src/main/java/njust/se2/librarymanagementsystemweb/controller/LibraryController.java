@@ -17,6 +17,7 @@ public class LibraryController {
      * @return 返回列表 json
      * @throws Exception 异常
      */
+    @CrossOrigin
     @GetMapping("/api/books")
     public List<Book> list() throws Exception {
         return bookService.list();
@@ -28,6 +29,7 @@ public class LibraryController {
      * @return 更改过后的书籍对象
      * @throws Exception 异常
      */
+    @CrossOrigin
     @PostMapping("/api/books")
     public Book addOrUpdate(@RequestBody Book book) throws Exception {
         bookService.addOrUpdate(book);
@@ -39,6 +41,7 @@ public class LibraryController {
      * @param book 书籍对象
      * @throws Exception 异常
      */
+    @CrossOrigin
     @PostMapping("/api/delete")
     public void delete(@RequestBody Book book) throws Exception {
         bookService.deleteById(book.getId());
@@ -51,6 +54,7 @@ public class LibraryController {
      * @return 书籍列表
      * @throws Exception 异常
      */
+    @CrossOrigin
     @GetMapping("/api/categories/{cid}/books")
     public List<Book> listByCategory(@PathVariable("cid") int cid) throws Exception {
         if (cid != 0) {
@@ -59,4 +63,21 @@ public class LibraryController {
             return list();
         }
     }
+
+    /**
+     * 根据关键字查询书籍
+     * @param keywords 关键字
+     * @return 书籍列表
+     */
+    @CrossOrigin
+    @GetMapping("/api/search")
+    public List<Book> searchResult(@RequestParam("keywords") String keywords) {
+        // 关键词为空时查询出所有书籍
+        if ("".equals(keywords)) {
+            return bookService.list();
+        } else {
+            return bookService.Search(keywords);
+        }
+    }
+
 }
