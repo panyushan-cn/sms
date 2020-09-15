@@ -2,10 +2,15 @@ package njust.se2.librarymanagementsystemweb.controller;
 
 import njust.se2.librarymanagementsystemweb.pojo.Book;
 import njust.se2.librarymanagementsystemweb.service.BookService;
+import njust.se2.librarymanagementsystemweb.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 public class LibraryController {
@@ -79,5 +84,42 @@ public class LibraryController {
             return bookService.Search(keywords);
         }
     }
+
+    @CrossOrigin
+    @PostMapping("api/covers")
+    public String coversUpload(MultipartFile file) throws Exception {
+        String folderPath = "D:/workspace/img";
+        File imageFolder = new File(folderPath);
+        String filename = file.getOriginalFilename();
+        if (filename.endsWith(".jpeg")) {
+            File f = new File(imageFolder, StringUtils.getRandomString(8) + Objects.requireNonNull(filename)
+                    .substring(filename.length() - 5));
+            if (!f.getParentFile().exists()) {
+                f.getParentFile().mkdirs();
+            }
+            try {
+                file.transferTo(f);
+                return "http://localhost:8998/api/file/" + f.getName();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "";
+            }
+        } else {
+            File f = new File(imageFolder, StringUtils.getRandomString(8) + Objects.requireNonNull(filename)
+                    .substring(filename.length() - 4));
+            if (!f.getParentFile().exists()) {
+                f.getParentFile().mkdirs();
+            }
+            try {
+                file.transferTo(f);
+                return "http://localhost:8998/api/file/" + f.getName();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "";
+            }
+        }
+
+    }
+
 
 }

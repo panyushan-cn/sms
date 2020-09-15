@@ -2,7 +2,12 @@ package njust.se2.librarymanagementsystemweb.controller;
 
 import njust.se2.librarymanagementsystemweb.pojo.User;
 import njust.se2.librarymanagementsystemweb.result.Result;
+import njust.se2.librarymanagementsystemweb.result.ResultFactory;
 import njust.se2.librarymanagementsystemweb.service.UserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
@@ -28,13 +33,23 @@ public class LoginController {
         // 对 html 标签进行转义，防止 XSS 攻击
         String username = requestUser.getUsername();
         username = HtmlUtils.htmlEscape(username);
+        Subject subject = SecurityUtils.getSubject();
 
-        User user = userService.get(username, requestUser.getPassword());
-        if (user == null) {
-            return new Result(400);
-        } else {
-            session.setAttribute("user",user);
-            return new Result(200);
+        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, requestUser.getPassword());
+        try {
+            subject.login(usernamePasswordToken);
+            return ResultFactory.buildSuccessResult(username);
+        } catch (AuthenticationException e) {
+            String message = "账号密码错误";
+            return ResultFactory.buildFailResult(message);
         }
+
+//        User user = userService.get(username, requestUser.getPassword());
+//        if (user == null) {
+//            return new Result(400);
+//        } else {
+//            session.setAttribute("user",user);
+//            return new Result(200);
+//        }
     }
 }
