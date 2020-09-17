@@ -6,7 +6,9 @@ import njust.se2.librarymanagementsystemweb.utils.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -87,9 +89,14 @@ public class LibraryController {
 
     @CrossOrigin
     @PostMapping("api/covers")
-    public String coversUpload(MultipartFile file) throws Exception {
+    public String coversUpload(MultipartFile file, HttpServletRequest request) throws Exception {
         String folderPath = "D:/workspace/img";
         File imageFolder = new File(folderPath);
+        // 转型为MultipartHttpRequest：
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        // 获得文件：
+        file = multipartRequest.getFile("file");
+        // 获得文件名：
         String filename = file.getOriginalFilename();
         if (filename.endsWith(".jpeg")) {
             File f = new File(imageFolder, StringUtils.getRandomString(8) + Objects.requireNonNull(filename)

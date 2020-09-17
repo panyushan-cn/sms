@@ -2,6 +2,10 @@ package njust.se2.librarymanagementsystemweb.interceptor;
 
 import njust.se2.librarymanagementsystemweb.pojo.User;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +45,20 @@ public class LoginInterceptor implements HandlerInterceptor {
                 return false;
             }
         }
-        return true;
+//        return true;
+
+        // 放行 options 请求，否则无法让前端带上自定义的 header 信息，导致 sessionID 改变，shiro 验证失败
+        if (HttpMethod.OPTIONS.toString().equals(httpServletRequest.getMethod())) {
+            System.out.println("HttpMethod.OPTIONS.toString()" + HttpMethod.OPTIONS.toString());
+            System.out.println("httpServletRequest.getMethod()" + httpServletRequest.getMethod());
+            httpServletResponse.setStatus(HttpStatus.NO_CONTENT.value());
+            return true;
+        }
+
+        Subject subject = SecurityUtils.getSubject();
+        // 使用 shiro 验证
+        System.out.println(subject.isAuthenticated() + " " + subject.isRemembered());
+        return subject.isAuthenticated();
     }
 
     private boolean begingWith(String page, String[] requiredAuthPages) {

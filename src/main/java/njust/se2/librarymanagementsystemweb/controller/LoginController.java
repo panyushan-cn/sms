@@ -36,6 +36,8 @@ public class LoginController {
         Subject subject = SecurityUtils.getSubject();
 
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, requestUser.getPassword());
+        //是否设置记住我选项
+        usernamePasswordToken.setRememberMe(true);
         try {
             subject.login(usernamePasswordToken);
             return ResultFactory.buildSuccessResult(username);
@@ -52,4 +54,23 @@ public class LoginController {
 //            return new Result(200);
 //        }
     }
+
+    @CrossOrigin
+    @ResponseBody
+    @GetMapping("api/logout")
+    public Result logout() {
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        String message = "成功登出";
+        return ResultFactory.buildSuccessResult(message);
+    }
+
+    @CrossOrigin
+    @ResponseBody
+    @GetMapping(value = "api/authentication")
+    public String authentication(){
+        return "身份认证成功";
+    }
+
+
 }
