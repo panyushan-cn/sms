@@ -1,12 +1,15 @@
 package njust.se2.librarymanagementsystemweb.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
-@JsonIgnoreProperties({"handler","hibernateLazyInitializer"})
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 
 public class User {
     @Id
@@ -14,9 +17,60 @@ public class User {
     @Column(name = "id")
     int id;
 
-    String username;
-    String password;
-    String salt;
+    @NotEmpty(message = "用户名不能为空")
+    private String username;
+    private String password;
+    private String salt;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Email(message = "请输入正确的邮箱")
+    private String email;
+    private boolean enabled;
+
+    public List<AdminRole> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<AdminRole> roles) {
+        this.roles = roles;
+    }
+
+    @Transient
+    private List<AdminRole> roles;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 
     public int getId() {
         return id;

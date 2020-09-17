@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-/**
- * @author Evan
- * @date 2019/11
- */
 @Service
 public class AdminPermissionService {
     @Autowired
@@ -31,17 +27,20 @@ public class AdminPermissionService {
     @Autowired
     UserService userService;
 
-    public List<AdminPermission> list() {return adminPermissionDAO.findAll();}
+    public List<AdminPermission> list() {
+        return adminPermissionDAO.findAll();
+    }
 
     /**
      * Determine whether client requires permission when requests
      * a certain API.
+     *
      * @param requestAPI API requested by client
      * @return true when requestAPI is found in the DB
      */
     public boolean needFilter(String requestAPI) {
         List<AdminPermission> ps = adminPermissionDAO.findAll();
-        for (AdminPermission p: ps) {
+        for (AdminPermission p : ps) {
             // match prefix
             if (requestAPI.startsWith(p.getUrl())) {
                 return true;
@@ -65,8 +64,6 @@ public class AdminPermissionService {
 
         List<AdminPermission> perms = adminPermissionDAO.findAllById(pids);
 
-        Set<String> URLs = perms.stream().map(AdminPermission::getUrl).collect(Collectors.toSet());
-
-        return URLs;
+        return perms.stream().map(AdminPermission::getUrl).collect(Collectors.toSet());
     }
 }

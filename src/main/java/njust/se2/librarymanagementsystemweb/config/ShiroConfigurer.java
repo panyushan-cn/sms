@@ -1,5 +1,6 @@
 package njust.se2.librarymanagementsystemweb.config;
 
+import njust.se2.librarymanagementsystemweb.filter.URLPathMatchingFilter;
 import njust.se2.librarymanagementsystemweb.realm.LMSRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
@@ -12,6 +13,8 @@ import org.apache.shiro.web.servlet.SimpleCookie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.servlet.Filter;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -26,10 +29,20 @@ public class ShiroConfigurer {
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+        shiroFilterFactoryBean.setLoginUrl("/login");
 
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
-        filterChainDefinitionMap.put("/api/file/**", "authc");
+        Map<String, Filter> customizedFilter = new HashMap<>();
+        // 设置自定义过滤器名称为 url
+        customizedFilter.put("url", getURLPathMatchingFilter());
 
+        // 对管理接口的访问启用自定义拦截（url 规则），即执行 URLPathMatchingFilter 中定义的过滤方法
+        filterChainDefinitionMap.put("/api/admin/**", "url");
+
+        filterChainDefinitionMap.put("/api/menu", "authc");
+        // 启用自定义过滤器
+        shiroFilterFactoryBean.setFilters(customizedFilter);
+        filterChainDefinitionMap.put("/api/authentication", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;
@@ -65,7 +78,6 @@ public class ShiroConfigurer {
         return authorizationAttributeSourceAdvisor;
     }
 
-    @Bean
     public CookieRememberMeManager rememberMeManager() {
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(rememberMeCookie());
@@ -79,5 +91,10 @@ public class ShiroConfigurer {
         simpleCookie.setMaxAge(259200);
         return simpleCookie;
     }
+
+    public URLPathMatchingFilter getURLPathMatchingFilter() {
+        return new URLPathMatchingFilter();
+    }
+
 
 }

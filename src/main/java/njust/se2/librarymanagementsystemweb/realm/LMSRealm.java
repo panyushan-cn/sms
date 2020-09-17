@@ -1,6 +1,7 @@
 package njust.se2.librarymanagementsystemweb.realm;
 
 import njust.se2.librarymanagementsystemweb.pojo.User;
+import njust.se2.librarymanagementsystemweb.service.AdminPermissionService;
 import njust.se2.librarymanagementsystemweb.service.UserService;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -13,15 +14,26 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Set;
+
 public class LMSRealm extends AuthorizingRealm {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private AdminPermissionService adminPermissionService;
 
     // 简单重写获取授权信息方法
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return new SimpleAuthorizationInfo();
+        // 获取当前用户的所有权限
+        String username = principalCollection.getPrimaryPrincipal().toString();
+        Set<String> permissions = adminPermissionService.listPermissionURLsByUser(username);
+
+        // 将权限放入授权信息中
+        SimpleAuthorizationInfo s = new SimpleAuthorizationInfo();
+        s.setStringPermissions(permissions);
+        return s;
     }
 
     // 获取认证信息，即根据 token 中的用户名从数据库中获取密码、salt等并返回
