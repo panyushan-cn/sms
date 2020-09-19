@@ -53,14 +53,14 @@ public class AdminMenuService {
         List<AdminMenu> menus = adminMenuDAO.findAllById(menuIds);
 
         handleMenus(menus);
-        for (AdminMenu menu : menus) {
-            System.out.print(menu + " ");
-        }
+//        for (AdminMenu menu : menus) {
+//            System.out.print(menu + " ");
+//        }
         return menus;
     }
 
     /**
-     * Adjust the Structure of the menu.
+     * 调整menu结构
      *
      * @param menus Menu items list without structure
      */
