@@ -43,7 +43,7 @@ public class User {
 
     @Email(message = "请输入正确的邮箱")
     private String email;
-    private boolean enabled;
+    private int enabled;
 
     public List<AdminRole> getRoles() {
         return roles;
@@ -64,11 +64,11 @@ public class User {
         this.email = email;
     }
 
-    public boolean isEnabled() {
+    public int getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
 

@@ -48,11 +48,11 @@ public class AdminRole {
         this.nameZh = nameZh;
     }
 
-    public boolean isEnabled() {
+    public int getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
 
@@ -86,8 +86,7 @@ public class AdminRole {
     /**
      * Role status.
      */
-    private boolean enabled;
-
+    private int enabled;
 
     /**
      * Transient property for storing permissions owned by current role.

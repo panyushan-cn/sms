@@ -38,11 +38,11 @@ public class ShiroConfigurer {
 
         // 对管理接口的访问启用自定义拦截（url 规则），即执行 URLPathMatchingFilter 中定义的过滤方法
         filterChainDefinitionMap.put("/api/admin/**", "url");
-
         filterChainDefinitionMap.put("/api/menu", "authc");
         // 启用自定义过滤器
         shiroFilterFactoryBean.setFilters(customizedFilter);
         filterChainDefinitionMap.put("/api/authentication", "authc");
+        filterChainDefinitionMap.put("/api/admin/**", "url");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;

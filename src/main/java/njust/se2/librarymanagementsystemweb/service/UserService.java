@@ -83,7 +83,7 @@ public class UserService {
 
     public void updateUserStatus(User user) {
         User userInDB = userdao.findByUsername(user.getUsername());
-        userInDB.setEnabled(user.isEnabled());
+        userInDB.setEnabled(user.getEnabled());
         userdao.save(userInDB);
     }
 
@@ -121,7 +121,7 @@ public class UserService {
         user.setPhone(phone);
         email = HtmlUtils.htmlEscape(email);
         user.setEmail(email);
-        user.setEnabled(true);
+        user.setEnabled(1);
 
         if (username.equals("") || password.equals("")) {
             return 0;

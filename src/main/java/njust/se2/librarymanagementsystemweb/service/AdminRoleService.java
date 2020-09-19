@@ -58,7 +58,7 @@ public class AdminRoleService {
 
     public AdminRole updateRoleStatus(AdminRole role) {
         AdminRole roleInDB = adminRoleDAO.findById(role.getId());
-        roleInDB.setEnabled(role.isEnabled());
+        roleInDB.setEnabled(role.getEnabled());
         return adminRoleDAO.save(roleInDB);
     }
 

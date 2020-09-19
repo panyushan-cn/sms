@@ -1,6 +1,5 @@
 package njust.se2.librarymanagementsystemweb.dto;
 
-
 import lombok.Data;
 import lombok.ToString;
 import njust.se2.librarymanagementsystemweb.dto.base.OutputConverter;
@@ -61,11 +60,11 @@ public class UserDTO implements OutputConverter<UserDTO, User> {
         this.email = email;
     }
 
-    public boolean isEnabled() {
+    public int getEnabled() {
         return enabled;
     }
 
-    public void setEnabled(boolean enabled) {
+    public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
 
@@ -79,7 +78,7 @@ public class UserDTO implements OutputConverter<UserDTO, User> {
 
     private String email;
 
-    private boolean enabled;
+    private int enabled;
 
     private List<AdminRole> roles;
 
