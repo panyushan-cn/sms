@@ -31,6 +31,7 @@ public class UserController {
 
     @PutMapping("/api/admin/user/password")
     public Result resetPassword(@RequestBody @Valid User requestUser) {
+
         userService.resetPassword(requestUser);
         return ResultFactory.buildSuccessResult("重置密码成功");
     }

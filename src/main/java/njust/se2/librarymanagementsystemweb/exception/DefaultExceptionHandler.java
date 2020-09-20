@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class DefaultExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public Result exceptionHandler(Exception e) {
-        String message = null;
+        String message = "server error";
 
         if (e instanceof IllegalArgumentException) {
             message = "传入了错误的参数";

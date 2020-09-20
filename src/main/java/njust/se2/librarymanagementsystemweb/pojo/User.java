@@ -21,6 +21,11 @@ public class User {
     private String username;
     private String password;
     private String salt;
+    private String name;
+    private String phone;
+    @Email(message = "请输入正确的邮箱")
+    private String email;
+    private int enabled;
 
     public String getName() {
         return name;
@@ -30,8 +35,6 @@ public class User {
         this.name = name;
     }
 
-    private String name;
-    private String phone;
 
     public String getPhone() {
         return phone;
@@ -41,9 +44,6 @@ public class User {
         this.phone = phone;
     }
 
-    @Email(message = "请输入正确的邮箱")
-    private String email;
-    private int enabled;
 
     public List<AdminRole> getRoles() {
         return roles;
