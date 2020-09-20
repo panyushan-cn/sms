@@ -17,7 +17,7 @@ public class User {
     @Column(name = "id")
     int id;
 
-    @NotEmpty(message = "用户名不能为空")
+    @NotEmpty(message = "server:用户名不能为空")
     private String username;
     private String password;
     private String salt;

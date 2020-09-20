@@ -7,10 +7,7 @@ import njust.se2.librarymanagementsystemweb.result.ResultFactory;
 import njust.se2.librarymanagementsystemweb.service.AdminUserRoleService;
 import njust.se2.librarymanagementsystemweb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -42,5 +39,12 @@ public class UserController {
     public Result editUser(@RequestBody @Valid User requestUser) {
         userService.editUser(requestUser);
         return ResultFactory.buildSuccessResult("修改用户信息成功");
+    }
+
+    @CrossOrigin
+    @PostMapping("/api/admin/user/delete")
+    public Result delete(@RequestBody User user) throws Exception {
+        userService.deleteById(user.getId());
+        return ResultFactory.buildSuccessResult("删除成功");
     }
 }
