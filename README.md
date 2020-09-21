@@ -2,7 +2,7 @@
 only for J2EE Course Design
 
 # 前端地址
-https://github.com/njustmengfanyu/lms-vue
+https://github.com/panyushan-cn/vue-sms
 
 ## 项目由SpringBoot + vue.js 搭建 (primary)
 
