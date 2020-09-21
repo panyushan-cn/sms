@@ -1,6 +1,4 @@
 package njust.se2.librarymanagementsystemweb.controller;
-
-
 import njust.se2.librarymanagementsystemweb.pojo.User;
 import njust.se2.librarymanagementsystemweb.result.Result;
 import njust.se2.librarymanagementsystemweb.result.ResultFactory;
@@ -8,7 +6,6 @@ import njust.se2.librarymanagementsystemweb.service.AdminUserRoleService;
 import njust.se2.librarymanagementsystemweb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 
 @RestController
@@ -36,8 +33,9 @@ public class UserController {
         return ResultFactory.buildSuccessResult("重置密码成功");
     }
 
+    @CrossOrigin
     @PutMapping("/api/admin/user")
-    public Result editUser(@RequestBody @Valid User requestUser) {
+    public Result editUser(@RequestBody User requestUser) {
         userService.editUser(requestUser);
         return ResultFactory.buildSuccessResult("修改用户信息成功");
     }

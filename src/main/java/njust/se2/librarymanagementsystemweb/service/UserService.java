@@ -97,19 +97,9 @@ public class UserService {
         return userdao.save(userInDB);
     }
 
-//    public void editUser(User user) {
-//        User userInDB = userdao.findByUsername(user.getUsername());
-//        userInDB.setName(user.getName());
-//        userInDB.setPhone(user.getPhone());
-//        userInDB.setEmail(user.getEmail());
-//        userdao.save(userInDB);
-//        //adminUserRoleService.saveRoleChanges(userInDB.getId(), user.getRoles());
-//    }
-
     public void editUser(User user) {
-        User userInDB = userdao.findById(user.getId());
+        User userInDB = userdao.findByUsername(user.getUsername());
         userInDB.setName(user.getName());
-        userInDB.setUsername(user.getUsername());
         userInDB.setPhone(user.getPhone());
         userInDB.setEmail(user.getEmail());
         userdao.save(userInDB);

@@ -18,13 +18,19 @@ public class User {
     int id;
 
     @NotEmpty(message = "server:用户名不能为空")
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
+    @Column(name = "salt")
     private String salt;
     private String name;
+    @Column(name = "phone")
     private String phone;
-    @Email(message = "请输入正确的邮箱")
+//    @Email(message = "请输入正确的邮箱")
+    @Column(name = "email")
     private String email;
+    @Column(name = "enabled")
     private int enabled;
 
     public String getName() {
@@ -34,7 +40,7 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-
+    @Column(name = "name")
 
     public String getPhone() {
         return phone;

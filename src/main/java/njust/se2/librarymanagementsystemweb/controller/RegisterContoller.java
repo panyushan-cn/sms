@@ -43,7 +43,7 @@ public class RegisterContoller {
 //    }
     @CrossOrigin
     @PostMapping("api/register")
-    @ResponseBody
+    @ResponseBody 
     public Result register(@RequestBody User user) {
         int status = userService.register(user);
         switch (status) {
