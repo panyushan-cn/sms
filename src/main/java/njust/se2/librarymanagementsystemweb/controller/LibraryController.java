@@ -1,5 +1,4 @@
 package njust.se2.librarymanagementsystemweb.controller;
-
 import njust.se2.librarymanagementsystemweb.pojo.Book;
 import njust.se2.librarymanagementsystemweb.result.Result;
 import njust.se2.librarymanagementsystemweb.result.ResultFactory;
@@ -31,6 +30,10 @@ public class LibraryController {
         return bookService.list();
     }
 
+    public List<Book> listByPressOrDate(String press){
+        return bookService.listByPressOrDate(press);
+    }
+
     /**
      * 返回书籍对象，更新状态。
      *
@@ -53,11 +56,10 @@ public class LibraryController {
      */
     @CrossOrigin
     @PostMapping("/api/admin/content/books/delete")
-    public Result delete(@RequestBody Book book) throws Exception {
+    public void delete(@RequestBody Book book) throws Exception {
+        int id = book.getId();
         bookService.deleteById(book.getId());
-        return ResultFactory.buildSuccessResult("删除成功");
     }
-
 
     /**
      * 根据类别查找书籍
@@ -76,6 +78,58 @@ public class LibraryController {
         }
     }
 
+    @CrossOrigin
+    @GetMapping("/api/categories/{cid}/books/{press}")
+    public List<Book> listByPressAndCategory(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
+        if (cid != 0 && press!=null)  {
+            //bookService.updateBookCid(3,press);
+            return null;
+        } else {
+            return listByPressOrDate(press);
+        }
+    }
+
+    @CrossOrigin
+    @GetMapping("/api/categories/{cid}/books1/{press}")
+    public List<Book> listByPressAndCategory1(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
+        if (cid != 0 && press!=null)  {
+            //bookService.updateBookCid(3,press);
+            return bookService.listByCategoryAndPress(cid,press);
+        } else {
+            return listByPressOrDate(press);
+        }
+    }
+    @CrossOrigin
+    @GetMapping("/api/categories/{cid}/books2/{press}")
+    public List<Book> listByPressAndCategory2(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
+        if (cid != 0 && press!=null)  {
+            //bookService.updateBookCid(3,press);
+            return bookService.listByCategoryAndPress(3, press);
+        } else {
+            return listByPressOrDate(press);
+        }
+    }
+    @CrossOrigin
+    @GetMapping("/api/categories/{cid}/books3/{press}")
+    public List<Book> listByPressAndCategory3(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
+        if (cid != 0 && press!=null)  {
+            //bookService.updateBookCid(3,press);
+            return bookService.listByCategoryAndDate(cid, press);
+        } else {
+            return listByPressOrDate(press);
+        }
+    }
+
+    @CrossOrigin
+    @GetMapping("/api/categories/{cid}/books4/{press}")
+    public List<Book> listByPressAndCategory4(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
+        if (cid != 0 && press!=null)  {
+            //bookService.updateBookCid(3,press);
+            return bookService.listByCategoryAndDate(cid, press);
+        } else {
+            return listByPressOrDate(press);
+        }
+    }
     /**
      * 根据关键字查询书籍
      *
@@ -84,12 +138,12 @@ public class LibraryController {
      */
     @CrossOrigin
     @GetMapping("/api/search")
-    public Result searchResult(@RequestParam("keywords") String keywords) {
+    public List<Book> searchResult(@RequestParam("keywords") String keywords) {
         // 关键词为空时查询出所有书籍
         if ("".equals(keywords)) {
-            return ResultFactory.buildSuccessResult(bookService.list());
+            return bookService.list();
         } else {
-            return ResultFactory.buildSuccessResult(bookService.Search(keywords));
+            return bookService.Search(keywords);
         }
     }
 
@@ -128,5 +182,17 @@ public class LibraryController {
 
     }
 
+
+
+    @CrossOrigin
+    @GetMapping("/api/press/{press}/books")
+    public List<Book> listByPress(@PathVariable("press") String press) throws Exception{
+        if (press!=null){
+            return bookService.listByPressOrDate(press);
+        }
+        else {
+            return list();
+        }
+    }
 
 }

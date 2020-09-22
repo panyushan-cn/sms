@@ -59,4 +59,39 @@ public class BookService {
     public List<Book> Search(String keywords) {
         return bookDAO.findAllByTitleLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
     }
+
+    public void updateBookCid(int press,String press1){
+        bookDAO.updateBookCid(press,press1);
+    }
+    public List<Book> listByPress(String press){
+        return bookDAO.findAllByPress(press);
+    }
+    public List<Book> listByPressOrDate(String press){
+        return bookDAO.findAllByPressOrDate(press,press);
+    }
+    public List<Book> listByCategoryAndPressEquals(int cid,String press){
+        Category category = categoryService.get(cid);
+        return bookDAO.findAllByCategoryAndPressEquals(category,press);
+    }
+
+    public List<Book> listByCategoryAndPressOrDate(int cid,String press,String date){
+        Category category = categoryService.get(cid);
+        return bookDAO.findAllByCategoryAndPressEqualsOrDateEquals(category,press,date);
+    }
+    public List<Book> listByPressOrDateAndCategory(String press,String date,int cid){
+        Category category = categoryService.get(cid);
+        return bookDAO.findAllByPressOrDateAndCategory(press,date,category);
+    }
+    public List<Book> listByCategoryAndPressOrCategoryAndDate(int cid,String press,String date){
+        Category category = categoryService.get(cid);
+        return bookDAO.findAllByCategoryAndPressOrCategoryAndDate(category,press,category,date);
+    }
+    public List<Book> listByCategoryAndPress(int cid,String press){
+        Category category = categoryService.get(cid);
+        return bookDAO.findAllByCategoryAndPress(category,press);
+    }
+    public List<Book> listByCategoryAndDate(int cid,String press){
+        Category category=categoryService.get(cid);
+        return bookDAO.findAllByCategoryAndDate(category, press);
+    }
 }

@@ -18,18 +18,10 @@ public class JpaTest {
     BookService bookService=new BookService();
 
     @Autowired
-    UserService userService = new UserService();
-    @Autowired
     UserDao userDao;
 
     @Test
     public void get(){
-        User user = new User();
-        user.setEmail("123");
-        user.setPhone("123");
-        user.setUsername("panyushan");
-        user.setName("admin");
-        user.setPassword("123");
-        userService.register(user);
+
     }
 }
