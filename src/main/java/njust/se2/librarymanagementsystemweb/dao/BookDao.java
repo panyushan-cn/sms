@@ -20,7 +20,7 @@ public interface BookDao extends JpaRepository<Book,Integer> {
     List<Book> findAllByCategory(Category category);
     List<Book> findAllByPress(String press);
     List<Book> findAllByPressOrDate(String press,String date);
-    List<Book> findAllByTitleLikeOrAuthorLike(String keyword1, String keyword2);
+    List<Book> findAllByBooknameLikeOrAuthorLike(String keyword1, String keyword2);
     List<Book> findAllByCategoryAndPressEquals(Category category, String press);
     List<Book> findAllByCategoryAndPressEqualsOrDateEquals(Category categoty,String press,String date);
     List<Book> findAllByPressOrDateAndCategory(String press,String date,Category category);

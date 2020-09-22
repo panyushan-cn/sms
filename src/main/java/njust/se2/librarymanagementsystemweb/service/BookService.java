@@ -21,7 +21,7 @@ public class BookService {
      * @return 书籍列表
      */
     public List<Book> list() {
-        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Sort sort = Sort.by(Sort.Direction.ASC, "id");
         return bookDAO.findAll(sort);
     }
 
@@ -57,7 +57,7 @@ public class BookService {
      * @return 符合关键字条件的书籍列表
      */
     public List<Book> Search(String keywords) {
-        return bookDAO.findAllByTitleLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
+        return bookDAO.findAllByBooknameLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
     }
 
     public void updateBookCid(int press,String press1){

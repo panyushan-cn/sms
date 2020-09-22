@@ -1,0 +1,2 @@
+2020-09-22 18:22:31.160 [http-nio-8998-exec-1] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Column 'bookname' cannot be null
+2020-09-22 18:22:51.639 [http-nio-8998-exec-7] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Column 'bookname' cannot be null

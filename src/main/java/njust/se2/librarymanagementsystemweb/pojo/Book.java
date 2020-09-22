@@ -18,7 +18,9 @@ public class Book {
     private Category category;
 
     String cover;
-    String title;
+
+//    @Column(name = "bookname")
+    String bookname;
     String author;
     String date;
     String press;
@@ -26,6 +28,13 @@ public class Book {
 
     public Category getCategory() {
         return category;
+    }
+    public String getBookname() {
+        return bookname;
+    }
+
+    public void setBookname(String bookname) {
+        this.bookname = bookname;
     }
 
     public void setCategory(Category category) {
@@ -70,14 +79,6 @@ public class Book {
 
     public void setCover(String cover) {
         this.cover = cover;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getAuthor() {
