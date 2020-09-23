@@ -57,41 +57,41 @@ public class BookService {
      * @return 符合关键字条件的书籍列表
      */
     public List<Book> Search(String keywords) {
-        return bookDAO.findAllByBooknameLikeOrAuthorLike('%' + keywords + '%', '%' + keywords + '%');
+        return bookDAO.findAllByThemeLikeOrDetailLike('%' + keywords + '%', '%' + keywords + '%');
     }
 
-    public void updateBookCid(int press,String press1){
-        bookDAO.updateBookCid(press,press1);
+    public void updateBookCid(int receive,String receive1){
+        bookDAO.updateBookCid(receive,receive1);
     }
-    public List<Book> listByPress(String press){
-        return bookDAO.findAllByPress(press);
+    public List<Book> listByReceive(String receive){
+        return bookDAO.findAllByReceive(receive);
     }
-    public List<Book> listByPressOrDate(String press){
-        return bookDAO.findAllByPressOrDate(press,press);
+    public List<Book> listByReceiveOrSend(String receive){
+        return bookDAO.findAllByReceiveOrSend(receive,receive);
     }
-    public List<Book> listByCategoryAndPressEquals(int cid,String press){
+    public List<Book> listByCategoryAndReceiveEquals(int cid,String receive){
         Category category = categoryService.get(cid);
-        return bookDAO.findAllByCategoryAndPressEquals(category,press);
+        return bookDAO.findAllByCategoryAndReceiveEquals(category,receive);
     }
 
-    public List<Book> listByCategoryAndPressOrDate(int cid,String press,String date){
+    public List<Book> listByCategoryAndReceiveOrSend(int cid,String receive,String send){
         Category category = categoryService.get(cid);
-        return bookDAO.findAllByCategoryAndPressEqualsOrDateEquals(category,press,date);
+        return bookDAO.findAllByCategoryAndReceiveEqualsOrSendEquals(category,receive,send);
     }
-    public List<Book> listByPressOrDateAndCategory(String press,String date,int cid){
+    public List<Book> listByReceiveOrSendAndCategory(String receive,String send,int cid){
         Category category = categoryService.get(cid);
-        return bookDAO.findAllByPressOrDateAndCategory(press,date,category);
+        return bookDAO.findAllByReceiveOrSendAndCategory(receive,send,category);
     }
-    public List<Book> listByCategoryAndPressOrCategoryAndDate(int cid,String press,String date){
+    public List<Book> listByCategoryAndReceiveOrCategoryAndSend(int cid,String receive,String send){
         Category category = categoryService.get(cid);
-        return bookDAO.findAllByCategoryAndPressOrCategoryAndDate(category,press,category,date);
+        return bookDAO.findAllByCategoryAndReceiveOrCategoryAndSend(category,receive,category,send);
     }
-    public List<Book> listByCategoryAndPress(int cid,String press){
+    public List<Book> listByCategoryAndReceive(int cid,String receive){
         Category category = categoryService.get(cid);
-        return bookDAO.findAllByCategoryAndPress(category,press);
+        return bookDAO.findAllByCategoryAndReceive(category,receive);
     }
-    public List<Book> listByCategoryAndDate(int cid,String press){
+    public List<Book> listByCategoryAndSend(int cid,String receive){
         Category category=categoryService.get(cid);
-        return bookDAO.findAllByCategoryAndDate(category, press);
+        return bookDAO.findAllByCategoryAndSend(category, receive);
     }
 }

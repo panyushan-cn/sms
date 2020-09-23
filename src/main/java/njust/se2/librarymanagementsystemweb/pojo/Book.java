@@ -5,7 +5,7 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "book")
+@Table(name = "message")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Book {
     @Id
@@ -17,45 +17,45 @@ public class Book {
     @JoinColumn(name = "cid")
     private Category category;
 
-    String cover;
+    @Column(name = "attachment")
+    String attachment;
+    @Column(name = "theme")
+    String theme;
 
-//    @Column(name = "bookname")
-    String bookname;
-    String author;
-    String date;
-    String press;
+    @Column(name = "detail")
+    String detail;
+
+    @Column(name = "send")
+    String send;
+
+    @Column(name = "receive")
+    String receive;
     String abs;
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
 
     public Category getCategory() {
         return category;
-    }
-    public String getBookname() {
-        return bookname;
-    }
-
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
     }
 
     public void setCategory(Category category) {
         this.category = category;
     }
 
-    public String getDate() {
-        return date;
+    public String getSend() {
+        return send;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setSend(String send) {
+        this.send = send;
     }
 
-    public String getPress() {
-        return press;
-    }
-
-    public void setPress(String press) {
-        this.press = press;
-    }
 
     public String getAbs() {
         return abs;
@@ -73,19 +73,27 @@ public class Book {
         this.id = id;
     }
 
-    public String getCover() {
-        return cover;
+
+    public String getDetail() {
+        return detail;
     }
 
-    public void setCover(String cover) {
-        this.cover = cover;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getReceive() {
+        return receive;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setReceive(String receive) {
+        this.receive = receive;
+    }
+    public String getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(String attachment) {
+        this.attachment = attachment;
     }
 }

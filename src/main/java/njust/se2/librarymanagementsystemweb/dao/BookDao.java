@@ -14,17 +14,17 @@ import java.util.List;
 public interface BookDao extends JpaRepository<Book,Integer> {
 
     @Modifying
-    @Query("update Book b set b.category.id=?1 where b.date=?2")
-    void updateBookCid(@Param("press") int press1, @Param("press1") String press2);
+    @Query("update Book b set b.category.id=?1 where b.send=?2")
+    void updateBookCid(@Param("receive") int receive1, @Param("receive1") String receive2);
 
     List<Book> findAllByCategory(Category category);
-    List<Book> findAllByPress(String press);
-    List<Book> findAllByPressOrDate(String press,String date);
-    List<Book> findAllByBooknameLikeOrAuthorLike(String keyword1, String keyword2);
-    List<Book> findAllByCategoryAndPressEquals(Category category, String press);
-    List<Book> findAllByCategoryAndPressEqualsOrDateEquals(Category categoty,String press,String date);
-    List<Book> findAllByPressOrDateAndCategory(String press,String date,Category category);
-    List<Book> findAllByCategoryAndPressOrCategoryAndDate(Category category, String press, Category category1,String date);
-    List<Book> findAllByCategoryAndPress(Category category,String press);
-    List<Book> findAllByCategoryAndDate(Category category,String press);
+    List<Book> findAllByReceive(String receive);
+    List<Book> findAllByReceiveOrSend(String receive,String send);
+    List<Book> findAllByThemeLikeOrDetailLike(String keyword1, String keyword2);
+    List<Book> findAllByCategoryAndReceiveEquals(Category category, String receive);
+    List<Book> findAllByCategoryAndReceiveEqualsOrSendEquals(Category categoty,String receive,String send);
+    List<Book> findAllByReceiveOrSendAndCategory(String receive,String send,Category category);
+    List<Book> findAllByCategoryAndReceiveOrCategoryAndSend(Category category, String receive, Category category1,String send);
+    List<Book> findAllByCategoryAndReceive(Category category,String receive);
+    List<Book> findAllByCategoryAndSend(Category category,String receive);
 }

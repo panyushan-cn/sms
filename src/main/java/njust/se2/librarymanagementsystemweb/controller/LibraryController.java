@@ -30,8 +30,8 @@ public class LibraryController {
         return bookService.list();
     }
 
-    public List<Book> listByPressOrDate(String press){
-        return bookService.listByPressOrDate(press);
+    public List<Book> listByReceiveOrSend(String receive){
+        return bookService.listByReceiveOrSend(receive);
     }
 
     /**
@@ -79,55 +79,55 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books/{press}")
-    public List<Book> listByPressAndCategory(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
-        if (cid != 0 && press!=null)  {
-            //bookService.updateBookCid(3,press);
+    @GetMapping("/api/categories/{cid}/books/{receive}")
+    public List<Book> listByReceiveAndCategory(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
+        if (cid != 0 && receive!=null)  {
+            //bookService.updateBookCid(3,receive);
             return null;
         } else {
-            return listByPressOrDate(press);
+            return listByReceiveOrSend(receive);
         }
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books1/{press}")
-    public List<Book> listByPressAndCategory1(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
-        if (cid != 0 && press!=null)  {
-            //bookService.updateBookCid(3,press);
-            return bookService.listByCategoryAndPress(cid,press);
+    @GetMapping("/api/categories/{cid}/books1/{receive}")
+    public List<Book> listByReceiveAndCategory1(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
+        if (cid != 0 && receive!=null)  {
+            //bookService.updateBookCid(3,receive);
+            return bookService.listByCategoryAndReceive(cid,receive);
         } else {
-            return listByPressOrDate(press);
+            return listByReceiveOrSend(receive);
         }
     }
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books2/{press}")
-    public List<Book> listByPressAndCategory2(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
-        if (cid != 0 && press!=null)  {
-            //bookService.updateBookCid(3,press);
-            return bookService.listByCategoryAndPress(3, press);
+    @GetMapping("/api/categories/{cid}/books2/{receive}")
+    public List<Book> listByReceiveAndCategory2(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
+        if (cid != 0 && receive!=null)  {
+            //bookService.updateBookCid(3,receive);
+            return bookService.listByCategoryAndReceive(3, receive);
         } else {
-            return listByPressOrDate(press);
+            return listByReceiveOrSend(receive);
         }
     }
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books3/{press}")
-    public List<Book> listByPressAndCategory3(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
-        if (cid != 0 && press!=null)  {
-            //bookService.updateBookCid(3,press);
-            return bookService.listByCategoryAndDate(cid, press);
+    @GetMapping("/api/categories/{cid}/books3/{receive}")
+    public List<Book> listByReceiveAndCategory3(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
+        if (cid != 0 && receive!=null)  {
+            //bookService.updateBookCid(3,receive);
+            return bookService.listByCategoryAndSend(cid, receive);
         } else {
-            return listByPressOrDate(press);
+            return listByReceiveOrSend(receive);
         }
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books4/{press}")
-    public List<Book> listByPressAndCategory4(@PathVariable("cid" ) int cid,@PathVariable("press") String press)  throws Exception{
-        if (cid != 0 && press!=null)  {
-            //bookService.updateBookCid(3,press);
-            return bookService.listByCategoryAndDate(cid, press);
+    @GetMapping("/api/categories/{cid}/books4/{receive}")
+    public List<Book> listByReceiveAndCategory4(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
+        if (cid != 0 && receive!=null)  {
+            //bookService.updateBookCid(3,receive);
+            return bookService.listByCategoryAndSend(cid, receive);
         } else {
-            return listByPressOrDate(press);
+            return listByReceiveOrSend(receive);
         }
     }
     /**
@@ -148,7 +148,7 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @PostMapping("/api/admin/content/books/covers")
+    @PostMapping("/api/admin/content/books/attachment")
     public String coversUpload(MultipartFile file) throws Exception {
         String folderPath = "D:/workspace/img";
         File imageFolder = new File(folderPath);
@@ -185,10 +185,10 @@ public class LibraryController {
 
 
     @CrossOrigin
-    @GetMapping("/api/press/{press}/books")
-    public List<Book> listByPress(@PathVariable("press") String press) throws Exception{
-        if (press!=null){
-            return bookService.listByPressOrDate(press);
+    @GetMapping("/api/receive/{receive}/books")
+    public List<Book> listByReceive(@PathVariable("receive") String receive) throws Exception{
+        if (receive!=null){
+            return bookService.listByReceiveOrSend(receive);
         }
         else {
             return list();

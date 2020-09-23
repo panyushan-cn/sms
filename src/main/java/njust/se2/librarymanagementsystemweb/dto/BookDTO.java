@@ -11,17 +11,17 @@ public class BookDTO implements OutputConverter<BookDTO, Book> {
 
     private int id;
 
-    private String bookname;
+    private String theme;
 
-    private String press;
+    private String receive;
 
-    private String author;
+    private String detail;
 
-    private String date;
+    private String send;
 
     private String abs;
 
-    private String cover;
+    private String attachment;
 
     private int cid;
 
@@ -33,36 +33,36 @@ public class BookDTO implements OutputConverter<BookDTO, Book> {
         this.id = id;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getTheme() {
+        return theme;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setTheme(String theme) {
+        this.theme = theme;
     }
 
-    public String getPress() {
-        return press;
+    public String getReceive() {
+        return receive;
     }
 
-    public void setPress(String press) {
-        this.press = press;
+    public void setReceive(String receive) {
+        this.receive = receive;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
-    public String getDate() {
-        return date;
+    public String getSend() {
+        return send;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setSend(String send) {
+        this.send = send;
     }
 
     public String getAbs() {
@@ -73,12 +73,12 @@ public class BookDTO implements OutputConverter<BookDTO, Book> {
         this.abs = abs;
     }
 
-    public String getCover() {
-        return cover;
+    public String getAttachment() {
+        return attachment;
     }
 
-    public void setCover(String cover) {
-        this.cover = cover;
+    public void setAttachment(String attachment) {
+        this.attachment = attachment;
     }
 
     public int getCid() {
