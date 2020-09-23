@@ -11,9 +11,9 @@
     </parent>
 <!--    Maven的基本配置-->
     <groupId>njust.se2</groupId>
-    <artifactId>librarymanagementsystem-web</artifactId>
+    <artifactId>Shortmessagesystem-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>librarymanagementsystem-web</name>
+    <name>Shortmessagesystem-web</name>
     <description>LSM project for Spring Boot</description>
 
 <!--    jdk版本-->
