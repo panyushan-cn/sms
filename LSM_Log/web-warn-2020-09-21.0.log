@@ -424,7 +424,7 @@ Caused by: javax.crypto.BadPaddingException: Given final block not properly padd
 2020-09-21 15:09:15.839 [http-nio-8998-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [161] milliseconds.
 2020-09-21 16:08:12.282 [http-nio-8998-exec-8] WARN  org.apache.shiro.authc.AbstractAuthenticator - Authentication failed for token submission [org.apache.shiro.authc.UsernamePasswordToken - editor, rememberMe=true].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
 java.lang.NullPointerException: null
-	at njust.se2.librarymanagementsystemweb.realm.LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
+	at LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
 	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:571)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
@@ -432,7 +432,7 @@ java.lang.NullPointerException: null
 	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
 	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:275)
 	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:260)
-	at njust.se2.librarymanagementsystemweb.controller.LoginController.login(LoginController.java:39)
+	at LoginController.login(LoginController.java:39)
 	at jdk.internal.reflect.GeneratedMethodAccessor107.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
@@ -493,7 +493,7 @@ java.lang.NullPointerException: null
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-09-21 16:08:16.132 [http-nio-8998-exec-7] WARN  org.apache.shiro.authc.AbstractAuthenticator - Authentication failed for token submission [org.apache.shiro.authc.UsernamePasswordToken - editor-1, rememberMe=true].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
 java.lang.NullPointerException: null
-	at njust.se2.librarymanagementsystemweb.realm.LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
+	at LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
 	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:571)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
@@ -501,7 +501,7 @@ java.lang.NullPointerException: null
 	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
 	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:275)
 	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:260)
-	at njust.se2.librarymanagementsystemweb.controller.LoginController.login(LoginController.java:39)
+	at LoginController.login(LoginController.java:39)
 	at jdk.internal.reflect.GeneratedMethodAccessor107.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
@@ -562,7 +562,7 @@ java.lang.NullPointerException: null
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-09-21 16:08:19.298 [http-nio-8998-exec-10] WARN  org.apache.shiro.authc.AbstractAuthenticator - Authentication failed for token submission [org.apache.shiro.authc.UsernamePasswordToken - test1, rememberMe=true].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
 java.lang.NullPointerException: null
-	at njust.se2.librarymanagementsystemweb.realm.LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
+	at LMSRealm.doGetAuthenticationInfo(LMSRealm.java:44)
 	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:571)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
 	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
@@ -570,7 +570,7 @@ java.lang.NullPointerException: null
 	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
 	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:275)
 	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:260)
-	at njust.se2.librarymanagementsystemweb.controller.LoginController.login(LoginController.java:39)
+	at LoginController.login(LoginController.java:39)
 	at jdk.internal.reflect.GeneratedMethodAccessor107.invoke(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)

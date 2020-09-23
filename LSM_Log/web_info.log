@@ -318,3 +318,203 @@
 2020-09-23 13:05:45.434 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-09-23 13:05:45.434 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-09-23 13:05:45.438 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-09-23 13:10:07.356 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+2020-09-23 13:10:07.385 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Starting LibrarymanagementsystemWebApplication on pnephrit with PID 5112 (E:\Desktop\sms\sms\target\classes started by panyu in E:\Desktop\sms\sms)
+2020-09-23 13:10:07.387 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - No active profile set, falling back to default profiles: default
+2020-09-23 13:10:08.020 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-23 13:10:08.094 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69ms. Found 9 JPA repository interfaces.
+2020-09-23 13:10:08.233 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfigurer' of type [njust.se2.librarymanagementsystemweb.config.ShiroConfigurer$$EnhancerBySpringCGLIB$$f9519afd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.292 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.305 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminUserRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.320 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRolePermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminRolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.324 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminPermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminPermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.332 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.336 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.337 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.338 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [njust.se2.librarymanagementsystemweb.service.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.339 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getLMSRealm' of type [njust.se2.librarymanagementsystemweb.realm.LMSRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.347 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:10:08.632 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8998 (http)
+2020-09-23 13:10:08.639 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:10:08.639 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-23 13:10:08.639 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-23 13:10:08.723 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-23 13:10:08.724 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1292 ms
+2020-09-23 13:10:08.828 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:10:08.841 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-23 13:10:08.929 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-23 13:10:08.960 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-23 13:10:08.989 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-09-23 13:10:09.076 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-23 13:10:09.136 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-09-23 13:10:09.151 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-23 13:10:09.258 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:10:09.274 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8998 (http) with context path ''
+2020-09-23 13:10:09.276 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2020-09-23 13:10:09.596 [task-1] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-23 13:10:09.601 [task-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-23 13:10:09.853 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2020-09-23 13:10:09.859 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Started LibrarymanagementsystemWebApplication in 2.981 seconds (JVM running for 3.84)
+2020-09-23 13:10:32.019 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:10:32.020 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:10:32.025 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-09-23 13:29:39.520 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+2020-09-23 13:29:39.557 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Starting LibrarymanagementsystemWebApplication on pnephrit with PID 10796 (E:\Desktop\sms\sms\target\classes started by panyu in E:\Desktop\sms\sms)
+2020-09-23 13:29:39.559 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - No active profile set, falling back to default profiles: default
+2020-09-23 13:29:40.136 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-23 13:29:40.227 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85ms. Found 9 JPA repository interfaces.
+2020-09-23 13:29:40.456 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfigurer' of type [njust.se2.librarymanagementsystemweb.config.ShiroConfigurer$$EnhancerBySpringCGLIB$$635c091b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.545 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.564 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminUserRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.580 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRolePermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminRolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.583 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminPermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminPermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.587 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.589 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.589 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.590 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [njust.se2.librarymanagementsystemweb.service.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.590 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getLMSRealm' of type [njust.se2.librarymanagementsystemweb.realm.LMSRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.595 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:29:40.775 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8998 (http)
+2020-09-23 13:29:40.782 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:29:40.782 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-23 13:29:40.782 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-23 13:29:40.853 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-23 13:29:40.853 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1238 ms
+2020-09-23 13:29:40.939 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:29:40.944 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-23 13:29:41.043 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-23 13:29:41.078 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-23 13:29:41.108 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-09-23 13:29:41.185 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-23 13:29:41.247 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-09-23 13:29:41.259 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-23 13:29:41.386 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:29:41.402 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8998 (http) with context path ''
+2020-09-23 13:29:41.403 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2020-09-23 13:29:41.764 [task-1] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-23 13:29:41.770 [task-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-23 13:29:42.063 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2020-09-23 13:29:42.070 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Started LibrarymanagementsystemWebApplication in 3.05 seconds (JVM running for 3.808)
+2020-09-23 13:29:50.395 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:29:50.396 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:29:50.401 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-09-23 13:36:00.137 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+2020-09-23 13:36:00.175 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Starting LibrarymanagementsystemWebApplication on pnephrit with PID 11456 (E:\Desktop\sms\sms\target\classes started by panyu in E:\Desktop\sms\sms)
+2020-09-23 13:36:00.179 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - No active profile set, falling back to default profiles: default
+2020-09-23 13:36:00.823 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-23 13:36:00.916 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87ms. Found 9 JPA repository interfaces.
+2020-09-23 13:36:01.142 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfigurer' of type [njust.se2.librarymanagementsystemweb.config.ShiroConfigurer$$EnhancerBySpringCGLIB$$8691d7d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.212 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.224 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminUserRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.239 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRolePermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminRolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.243 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminPermissionService' of type [njust.se2.librarymanagementsystemweb.service.AdminPermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.247 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.250 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminMenuService' of type [njust.se2.librarymanagementsystemweb.service.AdminMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.250 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleService' of type [njust.se2.librarymanagementsystemweb.service.AdminRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.251 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [njust.se2.librarymanagementsystemweb.service.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.252 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getLMSRealm' of type [njust.se2.librarymanagementsystemweb.realm.LMSRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.257 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:36:01.459 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8998 (http)
+2020-09-23 13:36:01.465 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:36:01.465 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-23 13:36:01.466 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-23 13:36:01.539 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-23 13:36:01.539 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1300 ms
+2020-09-23 13:36:01.625 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:36:01.630 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-23 13:36:01.717 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-23 13:36:01.751 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-23 13:36:01.782 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-09-23 13:36:01.858 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-23 13:36:01.916 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-09-23 13:36:01.930 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-23 13:36:02.054 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:36:02.070 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8998 (http) with context path ''
+2020-09-23 13:36:02.071 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2020-09-23 13:36:02.379 [task-1] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-23 13:36:02.384 [task-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-23 13:36:02.641 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2020-09-23 13:36:02.647 [main] INFO  n.s.l.LibrarymanagementsystemWebApplication - Started LibrarymanagementsystemWebApplication in 2.961 seconds (JVM running for 3.706)
+2020-09-23 13:36:13.786 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:36:13.786 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:36:13.791 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2020-09-23 13:40:56.303 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+2020-09-23 13:40:56.342 [main] INFO  n.c.s.ShortmessagesystemWebApplication - Starting ShortmessagesystemWebApplication on pnephrit with PID 12772 (E:\Desktop\sms\sms\target\classes started by panyu in E:\Desktop\sms\sms)
+2020-09-23 13:40:56.344 [main] INFO  n.c.s.ShortmessagesystemWebApplication - No active profile set, falling back to default profiles: default
+2020-09-23 13:40:56.939 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-23 13:40:56.997 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53ms. Found 9 JPA repository interfaces.
+2020-09-23 13:40:57.138 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfigurer' of type [njust.cs1.shortmessagesystemweb.config.ShiroConfigurer$$EnhancerBySpringCGLIB$$75bb4f2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.192 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.205 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserRoleService' of type [njust.cs1.shortmessagesystemweb.service.AdminUserRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.219 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRolePermissionService' of type [njust.cs1.shortmessagesystemweb.service.AdminRolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.222 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminPermissionService' of type [njust.cs1.shortmessagesystemweb.service.AdminPermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.226 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleMenuService' of type [njust.cs1.shortmessagesystemweb.service.AdminRoleMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.229 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminMenuService' of type [njust.cs1.shortmessagesystemweb.service.AdminMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.229 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleService' of type [njust.cs1.shortmessagesystemweb.service.AdminRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.230 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [njust.cs1.shortmessagesystemweb.service.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.230 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getLMSRealm' of type [njust.cs1.shortmessagesystemweb.realm.LMSRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.234 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:40:57.403 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8998 (http)
+2020-09-23 13:40:57.409 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:40:57.410 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-23 13:40:57.410 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-23 13:40:57.494 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-23 13:40:57.494 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1091 ms
+2020-09-23 13:40:57.588 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:40:57.593 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-23 13:40:57.675 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-23 13:40:57.709 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-23 13:40:57.740 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-09-23 13:40:57.818 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-23 13:40:57.874 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-09-23 13:40:57.892 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-23 13:40:58.013 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:40:58.033 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8998 (http) with context path ''
+2020-09-23 13:40:58.037 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2020-09-23 13:40:58.452 [task-1] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-23 13:40:58.457 [task-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-23 13:40:58.721 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2020-09-23 13:40:58.727 [main] INFO  n.c.s.ShortmessagesystemWebApplication - Started ShortmessagesystemWebApplication in 2.805 seconds (JVM running for 3.583)
+2020-09-23 13:41:12.209 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:41:12.209 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:41:12.215 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-09-23 13:45:47.593 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.4.1.Final
+2020-09-23 13:45:47.618 [main] INFO  n.c.s.ShortmessagesystemWebApplication - Starting ShortmessagesystemWebApplication on pnephrit with PID 10880 (E:\Desktop\sms\sms\target\classes started by panyu in E:\Desktop\sms\sms)
+2020-09-23 13:45:47.620 [main] INFO  n.c.s.ShortmessagesystemWebApplication - No active profile set, falling back to default profiles: default
+2020-09-23 13:45:48.242 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-23 13:45:48.298 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52ms. Found 9 JPA repository interfaces.
+2020-09-23 13:45:48.430 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfigurer' of type [njust.cs1.shortmessagesystemweb.config.ShiroConfigurer$$EnhancerBySpringCGLIB$$161014cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.491 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.503 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminUserRoleService' of type [njust.cs1.shortmessagesystemweb.service.AdminUserRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.518 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRolePermissionService' of type [njust.cs1.shortmessagesystemweb.service.AdminRolePermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.521 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminPermissionService' of type [njust.cs1.shortmessagesystemweb.service.AdminPermissionService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.525 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleMenuService' of type [njust.cs1.shortmessagesystemweb.service.AdminRoleMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.528 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminMenuService' of type [njust.cs1.shortmessagesystemweb.service.AdminMenuService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.528 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'adminRoleService' of type [njust.cs1.shortmessagesystemweb.service.AdminRoleService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.529 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [njust.cs1.shortmessagesystemweb.service.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.529 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'getLMSRealm' of type [njust.cs1.shortmessagesystemweb.realm.LMSRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.533 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-23 13:45:48.701 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8998 (http)
+2020-09-23 13:45:48.708 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:45:48.708 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-23 13:45:48.708 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-23 13:45:48.807 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-23 13:45:48.807 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1119 ms
+2020-09-23 13:45:48.901 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-23 13:45:48.908 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-23 13:45:49.034 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-23 13:45:49.084 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-23 13:45:49.143 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-09-23 13:45:49.242 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-23 13:45:49.307 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2020-09-23 13:45:49.319 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-09-23 13:45:49.444 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8998"]
+2020-09-23 13:45:49.463 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8998 (http) with context path ''
+2020-09-23 13:45:49.464 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Triggering deferred initialization of Spring Data repositories…
+2020-09-23 13:45:49.772 [task-1] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-23 13:45:49.777 [task-1] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-23 13:45:50.032 [main] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener - Spring Data repositories initialized!
+2020-09-23 13:45:50.038 [main] INFO  n.c.s.ShortmessagesystemWebApplication - Started ShortmessagesystemWebApplication in 2.836 seconds (JVM running for 3.571)
+2020-09-23 13:45:58.046 [http-nio-8998-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-23 13:45:58.046 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-23 13:45:58.051 [http-nio-8998-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
