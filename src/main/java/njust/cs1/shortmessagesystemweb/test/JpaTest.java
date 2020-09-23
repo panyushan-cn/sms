@@ -1,6 +1,8 @@
 package njust.cs1.shortmessagesystemweb.test;
 
 import njust.cs1.shortmessagesystemweb.dao.UserDao;
+import njust.cs1.shortmessagesystemweb.pojo.Contact;
+import njust.cs1.shortmessagesystemweb.service.ContactService;
 import njust.cs1.shortmessagesystemweb.service.MessageService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +16,8 @@ public class JpaTest {
 
     @Autowired
     MessageService messageService =new MessageService();
+    @Autowired
+    ContactService contactService;
 
     @Autowired
     UserDao userDao;
