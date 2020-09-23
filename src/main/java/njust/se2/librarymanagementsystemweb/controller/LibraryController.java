@@ -25,7 +25,7 @@ public class LibraryController {
      * @throws Exception 异常
      */
     @CrossOrigin
-    @GetMapping("/api/books")
+    @GetMapping("/api/messages")
     public List<Book> list() throws Exception {
         return bookService.list();
     }
@@ -42,7 +42,7 @@ public class LibraryController {
      * @throws Exception 异常
      */
     @CrossOrigin
-    @PostMapping("/api/admin/content/books")
+    @PostMapping("/api/admin/content/messages")
     public Result addOrUpdate(@RequestBody Book book) throws Exception {
         bookService.addOrUpdate(book);
         return ResultFactory.buildSuccessResult_p("修改成功", null);
@@ -55,7 +55,7 @@ public class LibraryController {
      * @throws Exception 异常
      */
     @CrossOrigin
-    @PostMapping("/api/admin/content/books/delete")
+    @PostMapping("/api/admin/content/messages/delete")
     public Result delete(@RequestBody Book book) throws Exception {
         bookService.deleteById(book.getId());
         return ResultFactory.buildSuccessResult_p("删除成功", null);
@@ -69,7 +69,7 @@ public class LibraryController {
      * @throws Exception 异常
      */
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books")
+    @GetMapping("/api/categories/{cid}/messages")
     public List<Book> listByCategory(@PathVariable("cid") int cid) throws Exception {
         if (cid != 0) {
             return bookService.listByCategory(cid);
@@ -79,7 +79,7 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books/{receive}")
+    @GetMapping("/api/categories/{cid}/messages/{receive}")
     public List<Book> listByReceiveAndCategory(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
         if (cid != 0 && receive!=null)  {
             //bookService.updateBookCid(3,receive);
@@ -90,7 +90,7 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books1/{receive}")
+    @GetMapping("/api/categories/{cid}/messages1/{receive}")
     public List<Book> listByReceiveAndCategory1(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
         if (cid != 0 && receive!=null)  {
             //bookService.updateBookCid(3,receive);
@@ -100,7 +100,7 @@ public class LibraryController {
         }
     }
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books2/{receive}")
+    @GetMapping("/api/categories/{cid}/messages2/{receive}")
     public List<Book> listByReceiveAndCategory2(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
         if (cid != 0 && receive!=null)  {
             //bookService.updateBookCid(3,receive);
@@ -110,7 +110,7 @@ public class LibraryController {
         }
     }
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books3/{receive}")
+    @GetMapping("/api/categories/{cid}/messages3/{receive}")
     public List<Book> listByReceiveAndCategory3(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
         if (cid != 0 && receive!=null)  {
             //bookService.updateBookCid(3,receive);
@@ -121,7 +121,7 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @GetMapping("/api/categories/{cid}/books4/{receive}")
+    @GetMapping("/api/categories/{cid}/messages4/{receive}")
     public List<Book> listByReceiveAndCategory4(@PathVariable("cid" ) int cid,@PathVariable("receive") String receive)  throws Exception{
         if (cid != 0 && receive!=null)  {
             //bookService.updateBookCid(3,receive);
@@ -148,7 +148,7 @@ public class LibraryController {
     }
 
     @CrossOrigin
-    @PostMapping("/api/admin/content/books/attachment")
+    @PostMapping("/api/admin/content/messages/attachment")
     public String coversUpload(MultipartFile file) throws Exception {
         String folderPath = "D:/workspace/img";
         File imageFolder = new File(folderPath);
@@ -185,7 +185,7 @@ public class LibraryController {
 
 
     @CrossOrigin
-    @GetMapping("/api/receive/{receive}/books")
+    @GetMapping("/api/receive/{receive}/messages")
     public List<Book> listByReceive(@PathVariable("receive") String receive) throws Exception{
         if (receive!=null){
             return bookService.listByReceiveOrSend(receive);
