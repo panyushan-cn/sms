@@ -14,8 +14,8 @@ public class CategoryService {
     CategoryDao categoryDAO;
 
     /**
-     * 将图书列表根据id排序
-     * @return 排序过后的图书列表
+     * 将短消息列表根据id排序
+     * @return 排序过后的短消息列表
      */
     public List<Category> list() {
         Sort sort = Sort.by(Sort.Direction.DESC, "id");
@@ -23,8 +23,8 @@ public class CategoryService {
     }
 
     /**
-     * 获取图书id信息
-     * @param id 图书id信息
+     * 获取短消息id信息
+     * @param id 短消息id信息
      * @return 查询是否库中有此id信息，没有则添加，有则返回。
      */
     public Category get(int id) {

@@ -18,12 +18,7 @@ public class MessageController {
     @Autowired
     MessageService messageService;
 
-    /**
-     * 获取书籍列表
-     *
-     * @return 返回列表 json
-     * @throws Exception 异常
-     */
+
     @CrossOrigin
     @GetMapping("/api/messages")
     public List<Message> list() throws Exception {
@@ -34,13 +29,7 @@ public class MessageController {
         return messageService.listByReceiveOrSend(receive);
     }
 
-    /**
-     * 返回书籍对象，更新状态。
-     *
-     * @param message 书籍对象
-     * @return 更改过后的书籍对象
-     * @throws Exception 异常
-     */
+
     @CrossOrigin
     @PostMapping("/api/admin/content/messages")
     public Result addOrUpdate(@RequestBody Message message) throws Exception {
@@ -48,12 +37,7 @@ public class MessageController {
         return ResultFactory.buildSuccessResult_p("修改成功", null);
     }
 
-    /**
-     * 根据id删除id操作
-     *
-     * @param message 书籍对象
-     * @throws Exception 异常
-     */
+
     @CrossOrigin
     @PostMapping("/api/admin/content/messages/delete")
     public Result delete(@RequestBody Message message) throws Exception {
@@ -61,13 +45,7 @@ public class MessageController {
         return ResultFactory.buildSuccessResult_p("删除成功", null);
     }
 
-    /**
-     * 根据类别查找书籍
-     *
-     * @param cid 书籍类别
-     * @return 书籍列表
-     * @throws Exception 异常
-     */
+
     @CrossOrigin
     @GetMapping("/api/categories/{cid}/messages")
     public List<Message> listByCategory(@PathVariable("cid") int cid) throws Exception {
@@ -130,12 +108,7 @@ public class MessageController {
             return listByReceiveOrSend(receive);
         }
     }
-    /**
-     * 根据关键字查询书籍
-     *
-     * @param keywords 关键字
-     * @return 书籍列表
-     */
+
     @CrossOrigin
     @GetMapping("/api/search")
     public List<Message> searchResult(@RequestParam("keywords") String keywords) {
